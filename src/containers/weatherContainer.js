@@ -1,4 +1,5 @@
 import { createSearchWeather } from "../components/searchWeatherComponent.js";
+import { createCardSWeather } from "../components/cardWeatherComponent.js";
 import { USER_INTERFACE_ID } from "../constants.js";
 
 export function initWeatherContainer() {
@@ -7,4 +8,6 @@ export function initWeatherContainer() {
 
   const searchElement = createSearchWeather();
   userInterface.append(searchElement);
+
+  const cardElement = crea
 }

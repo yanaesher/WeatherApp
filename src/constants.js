@@ -1,9 +1,9 @@
-/*------------------<API KEYS>----------------------------------------*/
-export const API_WEATHER_KEY = "37a44f5cd51942b78ee141400250504";
-/*------------------</API KEYS>---------------------------------------*/
-
 /*------------------<ID'S>---------------------------------------------*/
 export const USER_INTERFACE_ID = "user-interface";
-export const CITY_NAME_ID = "city-name";
+export const CITY_NAME_INPUT_ID = "city-name-input";
+export const WEATHER_LOCATION_ID = "weather-location";
+export const WEATHER_TEMP_ID = "weather-temp";
+export const WEATHER_CONDITION_TEXT_ID = "weather-condition-text";
 export const SEARCH_WEATHER_BUTTON_ID = "search-weather-button";
+export const WEATHER_CONDITION_PIC_ID = "weather-condition-pic";
 /*------------------</ID'S>---------------------------------------------*/
