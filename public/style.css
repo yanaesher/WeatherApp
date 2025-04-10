@@ -33,7 +33,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 16px;
   color: #fff;
   font-family: 'Roboto', sans-serif;
 }
@@ -86,6 +86,7 @@ select {
   max-width: 62.5rem;
   width: 100%;
   padding: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .container{
@@ -112,7 +113,7 @@ select {
 
 #weather-search-form{
 position: relative;
-font-size:0.875rem;
+font-size:0.875em;
 }
 
 #search-weather-button{
@@ -120,7 +121,7 @@ position: absolute;
 top: 0.3125em;
 right: 0.3125em;
 bottom: 0.3125em;
-padding: 0 2.5em;
+padding: 0 2.58em;
 border-radius: 2rem;
 border-color: inherit;
 background-color: #D9A1B9;
@@ -138,4 +139,45 @@ border: 2px solid #CCCCCC;
 .weather__content{
 padding: 6.25rem 0;
 background-color: rgba(16, 26, 74, 0.7);
+border-radius: 0 0 2rem 2rem;
 }
+
+
+.weather__card-date{
+display: flex;
+justify-content: space-between;
+color: #1E2968;
+background-color: #9189BC;
+padding: 0.3rem 1.25rem;
+border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.weather__card-body{
+	background-color: #8871A5;
+	display: flex;
+	justify-content:space-between;
+	padding: 1.25rem;
+	border-radius: 0rem 0rem 1.25rem 1.25rem;
+}
+
+.weather__content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#weather-location{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#weather-temp{
+	font-weight: bold;
+font-size: 4em;
+}
+
+.weather__card-pic{
+display: flex;
+align-items: center; 
+}
+
+
