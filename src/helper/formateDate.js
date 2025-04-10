@@ -1,5 +1,5 @@
 export function formatDate(localtime) {
-  const localTime = new Date(localtime); // Создаем объект Date из строки времени
+  const localTime = new Date(localtime); 
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -9,8 +9,8 @@ export function formatDate(localtime) {
     "Friday",
     "Saturday",
   ];
-  const dayOfWeek = daysOfWeek[localTime.getDay()]; // Получаем день недели
-  const formattedDate = localTime.toLocaleDateString("en-GB"); // Форматируем дату в формате dd/mm/yyyy
+  const dayOfWeek = daysOfWeek[localTime.getDay()]; 
+  const formattedDate = localTime.toLocaleDateString("en-GB"); 
 
   return {
     day: dayOfWeek,
