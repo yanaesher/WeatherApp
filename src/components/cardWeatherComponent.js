@@ -11,6 +11,7 @@ export function createCardSWeather(weatherData) {
   cardElement.id = `${WEATHER_CARD_ID}`;
   cardElement.innerHTML = `
   <div class="weather__card-date"> 
+  </div>
  <span>${weatherData.day}</span>
  <span>${weatherData.date}</span>
  </div>
@@ -24,6 +25,7 @@ export function createCardSWeather(weatherData) {
 
 <div class="weather__card-pic">
 <img id="${WEATHER_CONDITION_PIC_ID}" src='${weatherData.current.condition.icon}'>
+ </div>
  </div>
  `;
   return cardElement;
