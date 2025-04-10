@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;
+	background-image: url('./assets/img/WallpaperDog-18977.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container{
+	margin:0 auto;
+	padding: 0 1rem;
+}
+
+#user-interface{
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 62.5rem;
+  width: 100%;
+  padding: 1.1rem;
+}
+
+.container{
+	max-width: 31.25rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.weather__header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #9189BC;
+	padding: 1.5rem 0;
+	border-radius: 2rem 2rem 0 0;
+	width: 100%;
+	text-align: center;
+}
+
+.weather__title{
+	margin-bottom: 1.6rem;
+}
+
+#weather-search-form{
+position: relative;
+font-size:0.875rem;
+}
+
+#search-weather-button{
+position: absolute;
+top: 0.3125em;
+right: 0.3125em;
+bottom: 0.3125em;
+padding: 0 2.5em;
+border-radius: 2rem;
+border-color: inherit;
+background-color: #D9A1B9;
+color: #fff;
+}
+
+
+#city-name-input{
+width: 100%;
+padding: 0.6rem;
+border-radius: 2rem;
+border: 2px solid #CCCCCC;
+}

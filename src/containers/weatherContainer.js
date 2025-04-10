@@ -1,5 +1,6 @@
 import { createSearchWeather } from "../components/searchWeatherComponent.js";
 import { createCardSWeather } from "../components/cardWeatherComponent.js";
+import { createWeatherContent } from "../components/contentWeatherComponent.js";
 import {
   USER_INTERFACE_ID,
   CITY_NAME_INPUT_ID,
@@ -28,7 +29,11 @@ export async function initWeatherContainer() {
 function getCityName() {
   const input = document.getElementById(CITY_NAME_INPUT_ID);
 
-  if (input.value.trim().length > 0) return input.value;
+  if (input.value.trim().length > 0) {
+    return input.value;
+  }
+
+  alert("City name cannot be empty");
   throw new Error("City name cannot be empty");
 }
 
@@ -48,7 +53,8 @@ async function handleWeatherSearchForm(event) {
 
     if (!cardElementExists) {
       const cardElement = createCardSWeather(currentWeatherData);
-      userInterface.append(cardElement);
+      const weatherContentElement = createWeatherContent(cardElement);
+      userInterface.append(weatherContentElement);
     }
 
     updateCard(currentWeatherData);
