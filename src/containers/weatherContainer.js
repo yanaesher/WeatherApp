@@ -24,6 +24,16 @@ export async function initWeatherContainer() {
   //Get city data and show current weather card
   const searchFormElement = document.getElementById(WEATHER_SEARCH_FORM_ID);
   searchFormElement.addEventListener("submit", handleWeatherSearchForm);
+
+  const contentWeatherElement = createWeatherContent();
+  userInterface.append(contentWeatherElement);
+
+  const containerContentWeather = document.querySelector(
+    ".weather__content .container"
+  );
+  const defaultFetchWeather = await fetchCurrentWeather("London");
+  const cardElement = createCardSWeather(defaultFetchWeather);
+  containerContentWeather.append(cardElement);
 }
 
 function getCityName() {
@@ -45,18 +55,6 @@ async function handleWeatherSearchForm(event) {
   try {
     //Get current weather data;
     const currentWeatherData = await fetchCurrentWeather(cityName);
-
-    //create card Element
-    const userInterface = document.getElementById(USER_INTERFACE_ID);
-
-    const cardElementExists = !!document.getElementById(WEATHER_CARD_ID);
-
-    if (!cardElementExists) {
-      const cardElement = createCardSWeather(currentWeatherData);
-      const weatherContentElement = createWeatherContent(cardElement);
-      userInterface.append(weatherContentElement);
-    }
-
     updateCard(currentWeatherData);
   } catch (error) {
     console.error("Error fetching weather data:", error);
